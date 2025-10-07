@@ -1,0 +1,158 @@
+/* ====== CẤU HÌNH CHUNG ====== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #e9f0fa, #ffffff);
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+/* ====== PHẦN HEADER NHÓM ====== */
+.group-header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  background-color: #2b4c7e;
+  color: white;
+  border-bottom: 5px solid #476da7;
+}
+
+.group-header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.group-header h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.group-header p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* ====== PHẦN HÌNH ẢNH NHÓM ====== */
+.group-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background-color: #f4f6fa;
+  text-align: center;
+}
+
+.group-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200%;
+  height: 200%;
+  margin-top: 50px;
+}
+
+.group-photo img {
+  display: block;
+  margin: 0 auto;
+  max-width: 200%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: contain;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.group-photo img:hover {
+  transform: scale(1.03);
+}
+
+/* ====== DANH SÁCH THÀNH VIÊN ====== */
+.group-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.group-info h3 {
+  font-size: 22px;
+  color: #2b4c7e;
+  margin-bottom: 15px;
+}
+
+.group-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.group-info li {
+  font-size: 17px;
+  margin: 5px 0;
+  color: #333;
+  text-align: center;
+}
+
+/* ====== TRANG CHI TIẾT THÀNH VIÊN ====== */
+.member-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #ffffffd9;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.member-photo img {
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  margin-right: 30px;
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-info h1 {
+  font-size: 28px;
+  color: #2b4c7e;
+  margin-bottom: 10px;
+}
+
+.member-info p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+/* ====== NÚT QUAY LẠI ====== */
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2b4c7e;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background-color: #3f68b0;
+}
+
+/* ====== PHẦN CHÂN TRANG ====== */
+.footer {
+  background-color: #2b4c7e;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
