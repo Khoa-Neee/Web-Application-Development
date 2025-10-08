@@ -1,0 +1,161 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #e3f2fd 0%, #90caf9 100%);
+  min-height: 100vh;
+}
+.container {
+  max-width: 750px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(33, 150, 243, 0.15);
+  padding: 32px 24px;
+}
+.group-info {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #2196f3;
+  padding-bottom: 18px;
+  text-align: center;
+}
+.group-info h1 {
+  color: #1565c0;
+  margin-bottom: 10px;
+  font-size: 2.2em;
+}
+.group-info p {
+  color: #1976d2;
+  font-size: 1.1em;
+  margin: 6px 0;
+}
+.group-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #2196f3;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px rgba(33, 150, 243, 0.12);
+}
+.members {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+.member {
+  background: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 10px;
+  padding: 18px 14px;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
+  transition: transform 0.2s;
+  text-align: center;
+  position: relative;
+}
+.member:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.18);
+}
+.member-photo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #2196f3;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 6px rgba(33, 150, 243, 0.1);
+}
+.member-name {
+  color: #1565c0;
+  font-size: 1.15em;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.member-id {
+  color: #1976d2;
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+.details-btn {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 18px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 6px;
+  transition: background 0.2s;
+}
+.details-btn:hover {
+  background: #1565c0;
+}
+.member-details {
+  display: none;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.08);
+  padding: 12px;
+  margin-top: 10px;
+  text-align: left;
+  color: #0d47a1;
+  font-size: 0.98em;
+}
+@media (max-width: 900px) {
+  .members {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 16px 6px;
+  }
+  .members {
+    grid-template-columns: 1fr;
+  }
+}
+.group-photo-container {
+  position: relative;
+  width: 360px;
+  height: 240px;
+  margin: 0 auto 20px auto;
+  border: 6px solid #2196f3;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(33, 150, 243, 0.18);
+}
+.group-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0; /* Bỏ viền tròn */
+  border: none; /* Không viền */
+}
+.face-link {
+  position: absolute;
+  /* Không border, không border-radius, không box-shadow */
+  background: transparent;
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  /* Để vùng click, không hiện gì */
+}
+.face-link:hover {
+  /* Có thể thêm hiệu ứng outline nhẹ khi hover nếu muốn */
+  outline: 2px solid #2196f3;
+  outline-offset: 2px;
+}
+/* Ví dụ vị trí mặt, bạn cần chỉnh lại cho đúng với ảnh thực tế */
+.face-a {
+  left: 40px;
+  top: 60px;
+}
+.face-b {
+  left: 148px;
+  top: 56px;
+}
+.face-c {
+  left: 256px;
+  top: 62px;
+}
