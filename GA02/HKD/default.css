@@ -60,13 +60,13 @@ body {
   box-shadow: 0 6px 16px rgba(33, 150, 243, 0.18);
 }
 .member-photo {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #2196f3;
-  margin-bottom: 10px;
-  box-shadow: 0 1px 6px rgba(33, 150, 243, 0.1);
+  border: 4px solid #2196f3;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px rgba(33, 150, 243, 0.12);
 }
 .member-name {
   color: #1565c0;
@@ -140,25 +140,60 @@ body {
   /* Không border, không border-radius, không box-shadow */
   background: transparent;
   cursor: pointer;
-  width: 64px;
-  height: 64px;
+  width: 86px;
+  height: 86px;
   /* Để vùng click, không hiện gì */
-}
-.face-link:hover {
-  /* Có thể thêm hiệu ứng outline nhẹ khi hover nếu muốn */
-  outline: 2px solid #2196f3;
-  outline-offset: 2px;
 }
 /* Ví dụ vị trí mặt, bạn cần chỉnh lại cho đúng với ảnh thực tế */
 .face-a {
-  left: 40px;
-  top: 60px;
+  left: 25px;
+  top: 70px;
 }
 .face-b {
-  left: 148px;
+  left: 130px;
   top: 56px;
+  width: 100px;
+  height: 100px;
 }
 .face-c {
-  left: 256px;
-  top: 62px;
+  left: 270px;
+  top: 30px;
+  width: 128px;
+  height: 128px;
 }
+/* --- Member detail style --- */
+.member-detail-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(33, 150, 243, 0.15);
+  padding: 32px 24px;
+  text-align: center;
+}
+.member-detail-container h1 {
+  color: #1565c0;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+.info {
+  color: #1976d2;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 24px;
+  color: #2196f3;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #2196f3;
+  padding: 6px 18px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.back-link:hover {
+  background: #2196f3;
+  color: #fff;
+}
+/* --- End member detail style --- */
