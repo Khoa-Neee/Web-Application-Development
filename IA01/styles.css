@@ -1,0 +1,23 @@
+/* Import Google Fonts for logo */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+/* Logo font styling */
+.logo-font {
+  font-family: "Pacifico", cursive;
+  font-style: italic;
+}
+
+/* Deal card shadow effect */
+.deal-card-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative stripes for signup box */
+.decorative-stripes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.5rem;
+  display: flex;
+}

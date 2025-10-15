@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealers - Amazing Deals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-200">
+    <!-- Header -->
+    <header class="bg-gray-200 py-6">
+        <div class="container mx-auto px-4">
+            <!-- Restructured header to have logo above navigation on left, signup box on right -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+                <!-- Logo and Navigation - Stacked vertically -->
+                <div class="flex flex-col items-start gap-3">
+                    <h1 class="logo-font text-5xl sm:text-6xl text-gray-800">Dealers</h1>
+                    <nav class="flex flex-wrap items-center gap-3 sm:gap-4 text-sm sm:text-base">
+                        <a href="#" class="text-gray-700 hover:text-gray-900 font-medium">Home</a>
+                        <span class="text-gray-400">:</span>
+                        <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
+                        <span class="text-gray-400">:</span>
+                        <a href="#" class="text-gray-700 hover:text-gray-900">All Deals</a>
+                        <span class="text-gray-400">:</span>
+                        <a href="#" class="text-gray-700 hover:text-gray-900">Submit Your Deal</a>
+                        <span class="text-gray-400">:</span>
+                        <!-- Replaced button with email icon SVG -->
+                        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </nav>
+                </div>
+                
+                <!-- Signup Box -->
+                <div class="bg-white rounded-lg shadow-lg p-6 w-full lg:w-auto lg:min-w-[400px] relative">
+                    <!-- Updated decorative stripes to use red, white, and blue colors -->
+                    <div class="decorative-stripes">
+                        <div class="flex-1 bg-red-500"></div>
+                        <div class="flex-1 bg-white"></div>
+                        <div class="flex-1 bg-blue-500"></div>
+                        <div class="flex-1 bg-red-500"></div>
+                        <div class="flex-1 bg-white"></div>
+                        <div class="flex-1 bg-blue-500"></div>
+                        <div class="flex-1 bg-red-500"></div>
+                        <div class="flex-1 bg-white"></div>
+                        <div class="flex-1 bg-blue-500"></div>
+                        <div class="flex-1 bg-red-500"></div>
+                    </div>
+                    <!-- Made signup text bold -->
+                    <p class="text-gray-700 text-sm mb-3 mt-2 font-bold">Sign up for free to get deals directly to your mailbox</p>
+                    <!-- Added email icon with proper styling -->
+                    <div class="flex gap-2">
+                        <div class="flex-1 relative">
+                            <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <input type="email" placeholder="Enter Your E-mail Address" class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded text-sm focus:outline-none focus:border-gray-400">
+                        </div>
+                        <button class="bg-gray-400 hover:bg-gray-500 text-white px-6 py-2 rounded text-sm font-medium whitespace-nowrap">Subscribe Me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8 lg:p-12">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Left Column - Main Deal -->
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">This is one very amazing deal</h2>
+                    
+                    <!-- Deal Image -->
+                    <div class="bg-red-500 w-full aspect-video mb-6 rounded"></div>
+                    
+                    <!-- Deal Description -->
+                    <p class="text-gray-600 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+                
+                <!-- Right Column - Deal Info -->
+                <div class="lg:col-span-1">
+                    <div class="bg-gray-50 rounded-lg p-6 mb-6">
+                        <p class="text-gray-600 text-sm mb-2 text-center">This deal will end in:</p>
+                        <p class="text-gray-700 font-semibold text-center mb-4">6 days 1 hrs 52 min 51 sec</p>
+                        
+                        <div class="text-center mb-4">
+                            <p class="text-gray-500 text-sm mb-1">Discount</p>
+                            <p class="text-6xl font-bold text-gray-800">43%</p>
+                        </div>
+                        
+                        <div class="flex justify-center gap-8 mb-4">
+                            <div class="text-center">
+                                <p class="text-gray-500 text-sm">Deal Value</p>
+                                <p class="text-gray-800 font-semibold">$47</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-gray-500 text-sm">You Save</p>
+                                <p class="text-gray-800 font-semibold">$20</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Buttons -->
+                        <div class="flex justify-center gap-2 mb-6">
+                            <button class="bg-blue-400 text-white px-3 py-1 rounded text-xs flex items-center gap-1">
+                                Tweet
+                            </button>
+                            <button class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">9</button>
+                            <button class="bg-blue-600 text-white px-3 py-1 rounded text-xs flex items-center gap-1">
+                                Like
+                            </button>
+                            <button class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">5</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Buy Button -->
+                    <button class="w-full bg-green-400 hover:bg-green-500 text-gray-800 font-bold py-4 rounded-lg text-lg shadow-md">
+                        Buy this deal - 27$
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Partner Logos -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12">
+                    <span class="logo-font text-3xl sm:text-4xl text-gray-300">Dealers</span>
+                    <span class="text-xl sm:text-2xl text-gray-300 font-bold uppercase tracking-wider">Themes Kingdom</span>
+                    <span class="logo-font text-3xl sm:text-4xl text-gray-300">DovesMedia</span>
+                    <span class="text-xl sm:text-2xl text-gray-300 font-bold uppercase tracking-wider">Themes Kingdom</span>
+                    <span class="logo-font text-3xl sm:text-4xl text-gray-300">Sm</span>
+                </div>
+            </div>
+            
+            <!-- Deal Cards -->
+            <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Deal Card 1 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden deal-card-shadow">
+                    <div class="p-4">
+                        <h3 class="text-gray-800 font-semibold mb-3">Lorem Ipsum  Dolor Deal</h3>
+                        <div class="bg-red-500 w-full aspect-video mb-4 rounded"></div>
+                        <div class="flex justify-between text-sm mb-3">
+                            <div class="text-center">
+                                <p class="text-gray-500 text-xs">Deal Value</p>
+                                <p class="text-gray-800 font-semibold">$47</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-gray-500 text-xs">Discount</p>
+                                <p class="text-gray-800 font-semibold">43%</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-gray-500 text-xs">You Save</p>
+                                <p class="text-gray-800 font-semibold">$20</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-gray-400 text-xs">71 days 23 hrs 38  min36 sec</p>
+                            <button class="bg-green-400 hover:bg-green-500 text-gray-800 font-semibold px-4 py-1 rounded text-sm">SEE DEAL</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Deal Card 2 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden deal-card-shadow">
+                    <div class="p-4">
+                        <h3 class="text-gray-800 font-semibold mb-3">Lorem Ipsum  Dolor Deal</h3>
+                        <div class="bg-red-500 w-full aspect-video mb-4 rounded"></div>
+                        <div class="flex justify-between text-sm mb-3">
+                            <div class="text-center">
+                                <p class="text-gray-500 text-xs">Deal Value</p>
+                                <p class="text-gray-800 font-semibold">$47</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-gray-500 text-xs">Discount</p>
+                                <p class="text-gray-800 font-semibold">43%</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-gray-500 text-xs">You Save</p>
+                                <p class="text-gray-800 font-semibold">$20</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-gray-400 text-xs">71 days 23 hrs 38  min36 sec</p>
+                            <button class="bg-green-400 hover:bg-green-500 text-gray-800 font-semibold px-4 py-1 rounded text-sm">SEE DEAL</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Deal Card 3 -->
+                <div class="bg-white border border-gray-200 rounded-lg overflow-hidden deal-card-shadow">
+                    <div class="p-4">
+                        <h3 class="text-gray-800 font-semibold mb-3">Lorem Ipsum  Dolor Deal</h3>
+                        <div class="bg-red-500 w-full aspect-video mb-4 rounded"></div>
+                        <div class="flex justify-between text-sm mb-3">
+                            <div class="text-center">
+                                <p class="text-gray-500 text-xs">Deal Value</p>
+                                <p class="text-gray-800 font-semibold">$47</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-gray-500 text-xs">Discount</p>
+                                <p class="text-gray-800 font-semibold">43%</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-gray-500 text-xs">You Save</p>
+                                <p class="text-gray-800 font-semibold">$20</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-gray-400 text-xs">71 days 23 hrs 38  min36 sec</p>
+                            <button class="bg-green-400 hover:bg-green-500 text-gray-800 font-semibold px-4 py-1 rounded text-sm">SEE DEAL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Content -->
+            <div class="mt-12 pt-8 border-t border-gray-200 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- About Our Deals -->
+                <div>
+                    <h3 class="text-gray-800 font-bold text-lg mb-4">About Our Deals</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                    </p>
+                </div>
+                
+                <!-- Twitter Buzz -->
+                <div>
+                    <h3 class="text-gray-800 font-bold text-lg mb-4">Twitter Buzz</h3>
+                    <div class="space-y-4">
+                        <div class="border-b border-gray-200 pb-4">
+                            <p class="text-gray-600 text-sm mb-2">
+                                7 Photoshop tips for designing clean and modern websites <a href="#" class="text-blue-500">su.pr/1ruOpp</a>
+                            </p>
+                            <button class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-3 py-1 rounded text-xs">1Day Ago</button>
+                        </div>
+                        <div>
+                            <p class="text-gray-600 text-sm mb-2">
+                                7 Photoshop tips for designing clean and modern websites <a href="#" class="text-blue-500">su.pr/1ruOpp</a>
+                            </p>
+                            <button class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-3 py-1 rounded text-xs">1Day Ago</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Pages -->
+                <div>
+                    <h3 class="text-gray-800 font-bold text-lg mb-4">Other Pages</h3>
+                    <div class="space-y-3">
+                        <div class="border-b border-gray-200 pb-3">
+                            <a href="#" class="text-gray-600 hover:text-gray-800 text-sm">Home</a>
+                        </div>
+                        <div class="border-b border-gray-200 pb-3">
+                            <a href="#" class="text-gray-600 hover:text-gray-800 text-sm">About Our Deals</a>
+                        </div>
+                        <div class="border-b border-gray-200 pb-3">
+                            <a href="#" class="text-gray-600 hover:text-gray-800 text-sm">All Deals</a>
+                        </div>
+                        <div>
+                            <a href="#" class="text-gray-600 hover:text-gray-800 text-sm">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 py-6 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600 text-sm">
+                Copyright Information Goes Here 2012. All Rights Reserved.
+            </p>
+            <p class="text-gray-600 text-sm">
+                Designed by <a href="#" class="text-gray-800 font-semibold hover:underline">Themes Kingdom</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
