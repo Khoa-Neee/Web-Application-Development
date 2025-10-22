@@ -78,15 +78,9 @@ class Calculator {
       document.getElementById("sidePanel").classList.remove("open");
     });
 
-    // Close sidebar when clicking outside (optional)
-    document.addEventListener("click", (e) => {
-      const sidePanel = document.getElementById("sidePanel");
-      const isClickInsideSidebar = sidePanel.contains(e.target);
-      const isClickOnToggleBtn = e.target.id === "historyBtn" || e.target.id === "memoryBtn";
-      
-      if (!isClickInsideSidebar && !isClickOnToggleBtn && sidePanel.classList.contains("open")) {
-        sidePanel.classList.remove("open");
-      }
+    // Close sidebar button
+    document.getElementById("closePanelBtn").addEventListener("click", () => {
+    document.getElementById("sidePanel").classList.remove("open");
     });
   }
 
