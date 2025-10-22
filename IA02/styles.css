@@ -1,0 +1,440 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Enhanced Windows 11 dark theme colors with better contrast and authenticity */
+  --bg-primary: #0c0c0c;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #2d2d2d;
+  --bg-hover: #3d3d3d;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent-pink: #e81e8c;
+  --accent-pink-hover: #f03fa0;
+  --accent-pink-active: #d01a7a;
+  --border-color: #3d3d3d;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.calculator-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.calculator {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Enhanced header styling with better visual hierarchy */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.menu-btn:hover {
+  background-color: var(--bg-hover);
+}
+
+.menu-btn:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.3px;
+}
+
+.header-right {
+  display: flex;
+  gap: 8px;
+}
+
+.header-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.header-btn:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-hover);
+}
+
+.header-btn:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Improved display section with better typography and spacing */
+.display-section {
+  padding: 20px 16px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  text-align: right;
+}
+
+.history-display {
+  font-size: 14px;
+  color: var(--text-secondary);
+  min-height: 20px;
+  margin-bottom: 8px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.main-display {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--text-primary);
+  word-wrap: break-word;
+  word-break: break-all;
+  min-height: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  letter-spacing: -0.5px;
+}
+
+/* Enhanced memory buttons with better spacing and hover effects */
+.memory-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  padding: 8px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.memory-btn {
+  background-color: var(--bg-tertiary);
+  border: none;
+  color: var(--text-primary);
+  padding: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  font-weight: 500;
+}
+
+.memory-btn:hover {
+  background-color: var(--bg-hover);
+}
+
+.memory-btn:active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Refined buttons grid with improved visual feedback */
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  padding: 8px;
+  background-color: var(--bg-primary);
+}
+
+.btn {
+  background-color: var(--bg-tertiary);
+  border: none;
+  color: var(--text-primary);
+  padding: 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  font-weight: 500;
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: var(--bg-hover);
+}
+
+.btn:active {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.number-btn {
+  font-size: 20px;
+}
+
+.operator-btn {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.operator-btn:hover {
+  background-color: var(--bg-hover);
+}
+
+.function-btn {
+  background-color: var(--bg-tertiary);
+  font-size: 16px;
+}
+
+.function-btn:hover {
+  background-color: var(--bg-hover);
+}
+
+/* Enhanced equals button with better accent color and effects */
+.equals-btn {
+  background: linear-gradient(135deg, var(--accent-pink) 0%, #d01a7a 100%);
+  color: white;
+  font-size: 20px;
+  /* grid-column: span 2; */
+  box-shadow: 0 4px 12px rgba(232, 30, 140, 0.3);
+}
+
+.equals-btn:hover {
+  background: linear-gradient(135deg, var(--accent-pink-hover) 0%, #e81e8c 100%);
+  box-shadow: 0 6px 16px rgba(232, 30, 140, 0.4);
+}
+
+.equals-btn:active {
+  background: linear-gradient(135deg, var(--accent-pink-active) 0%, #b01570 100%);
+  box-shadow: 0 2px 8px rgba(232, 30, 140, 0.3);
+}
+
+.toggle-btn {
+  grid-column: span 1;
+}
+
+/* Improved responsive design for smaller screens */
+@media (max-width: 480px) {
+  .calculator-container {
+    max-width: 100%;
+  }
+
+  .main-display {
+    font-size: 36px;
+  }
+
+  .btn {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .number-btn {
+    font-size: 18px;
+  }
+
+  .header-right {
+    gap: 4px;
+  }
+
+  .header-btn {
+    font-size: 11px;
+    padding: 2px 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .main-display {
+    font-size: 28px;
+  }
+
+  .btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .memory-btn {
+    font-size: 10px;
+    padding: 6px;
+  }
+}
+
+/* ===== Side Panel ===== */
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100%;
+  background-color: var(--bg-secondary);
+  border-left: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.side-panel.open {
+  transform: translateX(0);
+}
+
+.side-panel-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.close-panel-btn {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.close-panel-btn:hover {
+  background-color: var(--bg-hover);
+}
+
+.close-panel-btn:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab-buttons {
+  display: none !important;
+  justify-content: space-around;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 10px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  color: var(--accent-pink);
+  border-bottom: 2px solid var(--accent-pink);
+}
+
+.tab-pane {
+  display: none;
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.tab-pane div {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* ===== Custom styling for History & Memory entries ===== */
+#historyContent div,
+#memoryContent div {
+  background-color: var(--bg-tertiary);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  word-wrap: break-word;
+}
+
+#historyContent div:hover,
+#memoryContent div:hover {
+  background-color: var(--bg-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#historyContent div,
+#memoryContent div {
+  animation: fadeIn 0.25s ease;
+}
+
+.tab-pane::before {
+  content: attr(data-title);
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  .side-panel {
+    position: fixed;
+    width: 85%;
+    max-width: 320px;
+    height: 100vh;
+  }
+}

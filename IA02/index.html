@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows 11 Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar panel -->
+    <div class="side-panel" id="sidePanel">
+        <div class="side-panel-header">
+            <button class="close-panel-btn" id="closePanelBtn">✕</button>
+        </div>
+        <div class="tab-buttons">
+            <button id="historyTab" class="tab active">History</button>
+            <button id="memoryTab" class="tab">Memory</button>
+        </div>
+        <div class="tab-content">
+            <div id="historyContent" class="tab-pane active" data-title="Calculation History"></div>
+            <div id="memoryContent" class="tab-pane" data-title="Stored Memory"></div>
+        </div>
+    </div>
+
+    <div class="calculator-container">
+        <div class="calculator">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <button class="menu-btn" id="menuBtn">☰</button>
+                    <span class="title">Standard</span>
+                </div>
+                <div class="header-right">
+                    <button class="header-btn" id="historyBtn">History</button>
+                    <button class="header-btn" id="memoryBtn">Memory</button>
+                </div>
+            </div>
+
+            <!-- Display -->
+            <div class="display-section">
+                <div class="history-display" id="historyDisplay"></div>
+                <div class="main-display" id="mainDisplay">0</div>
+            </div>
+
+            <!-- Memory Buttons -->
+            <div class="memory-buttons">
+                <button class="memory-btn" id="mcBtn">MC</button>
+                <button class="memory-btn" id="mrBtn">MR</button>
+                <button class="memory-btn" id="mPlusBtn">M+</button>
+                <button class="memory-btn" id="mMinusBtn">M−</button>
+                <button class="memory-btn" id="msBtn">MS</button>
+            </div>
+
+            <!-- Calculator Buttons Grid -->
+            <div class="buttons-grid">
+                <button class="btn number-btn" data-action="percent">%</button>
+                <button class="btn function-btn" data-action="ce">CE</button>
+                <button class="btn function-btn" data-action="clear">C</button>
+                <button class="btn function-btn" data-action="backspace">⌫</button>
+
+                <button class="btn number-btn" data-action="reciprocal">1/x</button>
+                <button class="btn number-btn" data-action="square">x²</button>
+                <button class="btn number-btn" data-action="sqrt">√x</button>
+                <button class="btn operator-btn" data-operator="/">÷</button>
+
+                <button class="btn number-btn" data-number="7">7</button>
+                <button class="btn number-btn" data-number="8">8</button>
+                <button class="btn number-btn" data-number="9">9</button>
+                <button class="btn operator-btn" data-operator="*">×</button>
+
+                <button class="btn number-btn" data-number="4">4</button>
+                <button class="btn number-btn" data-number="5">5</button>
+                <button class="btn number-btn" data-number="6">6</button>
+                <button class="btn operator-btn" data-operator="-">−</button>
+
+                <button class="btn number-btn" data-number="1">1</button>
+                <button class="btn number-btn" data-number="2">2</button>
+                <button class="btn number-btn" data-number="3">3</button>
+                <button class="btn operator-btn" data-operator="+">+</button>
+
+                <button class="btn number-btn toggle-btn" data-action="negate">+/−</button>
+                <button class="btn number-btn" data-number="0">0</button>
+                <button class="btn number-btn" data-action="decimal">.</button>
+                <button class="btn equals-btn" data-action="equals">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
