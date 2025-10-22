@@ -1,3 +1,8 @@
+// AI sinh code tổng quan
+// Tuy nhiên các phần xử lí tính toán em đã chỉnh lại để đúng hơn. 
+// Các hàm updateHistoryDisplay, handleKeyboard, và phần memory cũng được thêm vào để hoàn thiện chức năng máy tính.
+
+
 class Calculator {
   constructor() {
     this.display = document.getElementById("mainDisplay");
@@ -192,25 +197,20 @@ class Calculator {
   percentage() {
     const current = Number(this.currentValue);
     
-    // Nếu có operator trước đó (ví dụ: 200 + 10%)
     if (this.operator && this.previousValue) {
       const prev = Number(this.previousValue);
       
       switch (this.operator) {
         case "+":
         case "-":
-          // 200 + 10% → 10 biến thành 200 * 10% = 20
           this.currentValue = String(prev * current / 100);
           break;
         case "*":
         case "/":
-          // 200 * 10% → 10 biến thành 10/100 = 0.1
           this.currentValue = String(current / 100);
           break;
       }
     } else {
-      // Không có operator → chỉ chia cho 100
-      // 50% → 0.5
       this.currentValue = String(current / 100);
     }
     
